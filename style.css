@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+  --gold: #d4af37;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.gold, .experience {
+  color: var(--gold);
+}
+
+/* Hero Background */
+.hero-bg {
+  background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-4.0.3&auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* FIX: background-attachment: fixed sering patah/lag di Safari iOS dan
+   beberapa browser mobile. Dimatikan khusus untuk layar kecil. */
+@media (max-width: 768px) {
+  .hero-bg {
+    background-attachment: scroll;
+  }
+}
+
+.premium-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.itinerary-card {
+  transition: all 0.3s ease;
+}
+
+.itinerary-card:hover {
+  background-color: #18181b;
+  border-color: var(--gold);
+}
+
+.gallery-img {
+  transition: all 0.4s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.tracking-widest {
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .hero-bg h2 {
+    font-size: 3.5rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* FIX: hormati preferensi user yang mematikan animasi di OS-nya */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .premium-card,
+  .itinerary-card,
+  .gallery-img {
+    transition: none;
+  }
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentawai Travel Experience | Jungle Tour Siberut</title>
+
+  <!-- FIX: tailwind.config harus dimuat SEBELUM script CDN, supaya class
+       bg-gold / text-gold / border-gold / hover:bg-gold / accent-gold dikenali -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold: '#d4af37' }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div>
+        <h1 class="text-3xl font-bold tracking-[3px] gold">
+          Mentawai Travel <span class="experience">Experience</span>
+        </h1>
+        <p class="text-[10px] tracking-[2px] text-white/40 -mt-1">SIBERUT • MENTAWAI</p>
+      </div>
+      <button onclick="openBookingModal()" 
+              class="px-8 py-3.5 rounded-full border border-white/30 hover:bg-white hover:text-black transition-all duration-300 text-sm tracking-widest">
+        BOOK YOUR JOURNEY
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-bg h-screen flex items-center justify-center text-center relative">
+    <div class="max-w-4xl px-6" data-aos="fade-up" data-aos-duration="1200">
+      <div class="inline-block px-5 py-1.5 rounded-full border border-white/20 text-xs tracking-[3px] mb-6">SIBERUT • MENTAWAI</div>
+      <h2 class="text-6xl md:text-8xl font-light tracking-widest mb-4 leading-none">JUNGLE<br>EXPERIENCE</h2>
+      <p class="text-xl md:text-2xl text-white/70 mb-10">5 Hari • 4 Malam • Pengalaman Budaya Asli Mentawai</p>
+      <button onclick="openBookingModal()" 
+              class="group px-14 py-6 border-2 border-gold text-gold hover:bg-gold hover:text-black transition-all duration-300 text-lg tracking-widest flex items-center gap-3 mx-auto">
+        MULAI PERJALANAN <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-20 bg-zinc-950">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <h2 class="text-5xl font-light">What's Included</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="premium-card bg-zinc-900 p-8 rounded-3xl border border-white/10" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-home text-4xl gold mb-6"></i>
+          <h4 class="text-2xl mb-3">Traditional Lodge</h4>
+          <p class="text-white/70">Mengintap di rumah adat khas Mentawai di tengah hutan tropis.</p>
+        </div>
+        <div class="premium-card bg-zinc-900 p-8 rounded-3xl border border-white/10" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-user-tie text-4xl gold mb-6"></i>
+          <h4 class="text-2xl mb-3">Local Expert Guide</h4>
+          <p class="text-white/70">Dipandu oleh penduduk asli Mentawai yang berpengalaman.</p>
+        </div>
+        <div class="premium-card bg-zinc-900 p-8 rounded-3xl border border-white/10" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-utensils text-4xl gold mb-6"></i>
+          <h4 class="text-2xl mb-3">All Meals & Activities</h4>
+          <p class="text-white/70">Makanan tradisional, berburu, membuat racun panah, dan aktivitas budaya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Itinerary -->
+  <section class="py-20 bg-black">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <h2 class="text-5xl font-light">Your 5-Day Journey</h2>
+      </div>
+      <div class="space-y-6">
+        <div class="itinerary-card bg-zinc-900 border border-white/10 p-8 rounded-3xl flex gap-8 items-start" data-aos="fade-up">
+          <div class="w-14 h-14 flex-shrink-0 bg-gold text-black rounded-2xl flex items-center justify-center text-3xl font-light">01</div>
+          <div>
+            <h4 class="text-2xl mb-2">Day 1 — Arrival & Kabbit Making</h4>
+            <p class="text-white/70">Tiba di Ugai, istirahat, paginya berjalan ke ladang dan belajar membuat <span class="gold">Kabbit (MubaiKo)</span>.</p>
+          </div>
+        </div>
+        <div class="itinerary-card bg-zinc-900 border border-white/10 p-8 rounded-3xl flex gap-8 items-start" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-14 h-14 flex-shrink-0 bg-gold text-black rounded-2xl flex items-center justify-center text-3xl font-light">02</div>
+          <div>
+            <h4 class="text-2xl mb-2">Day 2 — Arrow Poison & Hunting</h4>
+            <p class="text-white/70">Belajar membuat racun panah dan berburu ke dalam hutan.</p>
+          </div>
+        </div>
+        <div class="itinerary-card bg-zinc-900 border border-white/10 p-8 rounded-3xl flex gap-8 items-start" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 flex-shrink-0 bg-gold text-black rounded-2xl flex items-center justify-center text-3xl font-light">03</div>
+          <div>
+            <h4 class="text-2xl mb-2">Day 3 — River Fishing with the Women</h4>
+            <p class="text-white/70">Ikut ibu-ibu ke sungai mencari udang dan ikan secara tradisional.</p>
+          </div>
+        </div>
+        <div class="itinerary-card bg-zinc-900 border border-white/10 p-8 rounded-3xl flex gap-8 items-start" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-14 h-14 flex-shrink-0 bg-gold text-black rounded-2xl flex items-center justify-center text-3xl font-light">04</div>
+          <div>
+            <h4 class="text-2xl mb-2">Day 4 — Rest & Traditional Dance (Optional)</h4>
+            <p class="text-white/70">Hari santai. Malamnya boleh menyaksikan tarian khas Mentawai (+ $75/orang).</p>
+          </div>
+        </div>
+        <div class="itinerary-card bg-zinc-900 border border-white/10 p-8 rounded-3xl flex gap-8 items-start" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-14 h-14 flex-shrink-0 bg-gold text-black rounded-2xl flex items-center justify-center text-3xl font-light">05</div>
+          <div>
+            <h4 class="text-2xl mb-2">Day 5 — Return Journey</h4>
+            <p class="text-white/70">Pagi terakhir di hutan sebelum pulang.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="py-20 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-5xl font-light">Moments in the Jungle</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-black border-t border-white/10">
+    <div class="max-w-xl mx-auto text-center px-6" data-aos="fade-up">
+      <h2 class="text-5xl font-light mb-6">Ready to step into the jungle?</h2>
+      <p class="text-white/70 mb-10">Hanya 4 slot tersedia per keberangkatan</p>
+      <button onclick="openBookingModal()" class="px-14 py-6 bg-gold text-black text-lg tracking-widest font-semibold rounded-2xl hover:bg-amber-400 transition">
+        RESERVE YOUR SPOT — $280 / PERSON
+      </button>
+    </div>
+  </section>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-[100]">
+    <div class="bg-zinc-900 rounded-3xl max-w-lg w-full mx-4 relative">
+      <button onclick="document.getElementById('bookingModal').classList.add('hidden')"
+              aria-label="Tutup"
+              class="absolute top-5 right-5 text-white/50 hover:text-gold text-2xl leading-none">×</button>
+      <div class="p-8">
+        <h3 class="text-3xl font-light mb-8 text-center">Reserve Your Jungle Journey</h3>
+        <form id="bookingForm" onsubmit="handleBooking(event)">
+          <div class="grid grid-cols-2 gap-6">
+            <div>
+              <label for="nama" class="block text-sm mb-2">Nama Lengkap</label>
+              <input type="text" id="nama" class="w-full bg-black border border-white/20 rounded-2xl p-4" required>
+            </div>
+            <div>
+              <label for="hp" class="block text-sm mb-2">WhatsApp</label>
+              <!-- FIX: field ini sebelumnya pre-filled dengan nomor WA milik bisnis sendiri
+                   (sama dengan nomor di tombol WA mengambang), jadi kalau pemesan tidak
+                   mengganti, data yang masuk adalah nomor bisnis sendiri, bukan nomor pemesan.
+                   Diganti jadi placeholder kosong. -->
+              <input type="tel" id="hp" placeholder="08xxxxxxxxxx" class="w-full bg-black border border-white/20 rounded-2xl p-4" required>
+            </div>
+          </div>
+          <div class="mt-6">
+            <label for="email" class="block text-sm mb-2">Email</label>
+            <input type="email" id="email" class="w-full bg-black border border-white/20 rounded-2xl p-4" required>
+          </div>
+          <div class="grid grid-cols-2 gap-6 mt-6">
+            <div>
+              <label for="startDate" class="block text-sm mb-2">Tanggal Mulai</label>
+              <input type="date" id="startDate" class="w-full bg-black border border-white/20 rounded-2xl p-4" required>
+            </div>
+            <div>
+              <label for="orang" class="block text-sm mb-2">Jumlah Orang (Min 4)</label>
+              <input type="number" id="orang" value="4" min="4" oninput="calculatePrice()" class="w-full bg-black border border-white/20 rounded-2xl p-4">
+            </div>
+          </div>
+          <div class="mt-6 p-5 bg-zinc-800 rounded-2xl">
+            <label class="flex items-center gap-3 cursor-pointer">
+              <input type="checkbox" id="tarian" onchange="calculatePrice()" class="w-5 h-5 accent-gold">
+              <span class="text-sm">Tambah Tarian Tradisional (+$75/orang)</span>
+            </label>
+          </div>
+          <div class="mt-8 p-6 bg-black rounded-2xl">
+            <div class="flex justify-between text-lg">
+              <span>Total Estimasi</span>
+              <span id="totalPrice" class="font-semibold gold text-2xl">$0</span>
+            </div>
+          </div>
+          <button type="submit" class="w-full mt-8 bg-gold text-black py-6 text-xl font-semibold rounded-2xl hover:bg-amber-400 transition">KONFIRMASI PESANAN</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6285268750602?text=Halo%20Mentawai%20Travel%20Experience" target="_blank" 
+     class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition text-3xl z-50">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer class="bg-black py-16 text-center border-t border-white/10">
+    <p class="text-white/40">© 2026 Mentawai Travel Experience • Siberut, Kepulauan Mentawai</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="hidden fixed inset-0 bg-black/95 z-[200] flex items-center justify-center p-4">
+    <div class="relative max-w-5xl w-full">
+      <img id="lightboxImage" class="max-h-[85vh] w-full object-contain rounded-3xl" alt="Galeri Mentawai Travel Experience">
+      <button onclick="closeLightbox()" class="absolute -top-3 -right-3 bg-white text-black w-11 h-11 rounded-full flex items-center justify-center text-3xl hover:bg-gold transition">×</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 1000 });
+
+    const galleryImages = [
+      "IMG_6473.jpg","IMG_6466.jpg","IMG_6448.jpg","IMG_6451.jpg",
+      "IMG_6370.jpg","IMG_6364.jpg","IMG_6329.jpg","IMG_6316.jpg",
+      "IMG_6317.jpg","IMG_6305.jpg","IMG_6285.jpg","IMG_6351.jpg",
+      "IMG_6257.jpg","IMG_6247.jpg","IMG_6241.jpg","IMG_6233.jpg"
+    ];
+
+    function renderGallery() {
+      const container = document.getElementById('galleryGrid');
+      // FIX: sebelumnya template literal-nya rusak (tertulis "\( {src}" dan
+      // " \){index}" bukan "${src}" / "${index}"), jadi setiap gambar src-nya
+      // jadi teks literal yang salah dan onclick-nya error / tidak terpanggil.
+      container.innerHTML = galleryImages.map((src, index) => `
+        <img src="${src}" loading="lazy" class="w-full h-72 object-cover rounded-3xl cursor-pointer gallery-img" onclick="showLightbox(${index})">
+      `).join('');
+    }
+
+    function showLightbox(index) {
+      const lightbox = document.getElementById('lightbox');
+      document.getElementById('lightboxImage').src = galleryImages[index];
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+    }
+
+    function calculatePrice() {
+      const raw = parseInt(document.getElementById('orang').value) || 4;
+      const orang = Math.max(4, raw); // jaga supaya tidak bisa dihitung di bawah minimum 4 orang
+      let total = 280 * orang;
+      if (document.getElementById('tarian').checked) total += 75 * orang;
+      document.getElementById('totalPrice').textContent = `$${total}`;
+    }
+
+    function openBookingModal() {
+      document.getElementById('bookingModal').classList.remove('hidden');
+      calculatePrice();
+    }
+
+    function handleBooking(e) {
+      e.preventDefault();
+      alert("✅ Pesanan telah diterima. Silakan transfer dan kirim bukti ke WhatsApp.");
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+
+    window.onload = renderGallery;
+
+    document.getElementById('bookingModal').addEventListener('click', function(e) {
+      if (e.target === this) this.classList.add('hidden');
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+        document.getElementById('bookingModal').classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
